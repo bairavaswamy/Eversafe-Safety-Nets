@@ -1,0 +1,157 @@
+.hg-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ================= HERO ================= */
+
+.hg-hero-container {
+  position: relative;
+}
+
+.hg-hero-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .hg-hero-image {
+    height: 520px;
+  }
+}
+
+/* ================= NAV BUTTONS ================= */
+
+.hg-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hg-nav-button:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.hg-nav-button svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.hg-nav-button.left {
+  left: 12px;
+}
+
+.hg-nav-button.right {
+  right: 12px;
+}
+
+/* ================= THUMBNAILS ================= */
+
+.hg-thumbnails-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.hg-thumbnails {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 40px;
+  scroll-behavior: smooth;
+}
+
+.hg-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.hg-thumb {
+  width: 112px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #d1d5db;
+}
+
+.hg-thumb:hover {
+  opacity: 0.8;
+}
+
+.hg-thumb.active {
+  border: 2px solid #facc15;
+}
+
+/* ================= SCROLL BUTTONS ================= */
+
+.hg-scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hg-scroll-button:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.hg-scroll-button svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.hg-scroll-button.left {
+  left: 0;
+}
+
+.hg-scroll-button.right {
+  right: 0;
+}
+
+.hg-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.hg-thumb {
+  scroll-snap-align: center;
+  cursor: pointer;
+  transition: transform .3s, opacity .3s;
+}
+
+.hg-thumb:hover {
+  transform: scale(1.05);
+}
+
+.hg-thumb.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
